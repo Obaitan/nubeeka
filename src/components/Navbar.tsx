@@ -2,11 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { NavLinks } from "@/types";
+
+import { usePathname } from "next/navigation";
 
 export function NavbarComponent() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -14,7 +18,7 @@ export function NavbarComponent() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 120;
+      const isScrolled = window.scrollY > 100;
       if (isScrolled !== scrolled) {
         setScrolled(isScrolled);
       }
@@ -28,45 +32,63 @@ export function NavbarComponent() {
 
   const links: NavLinks[] = [
     { label: "About Us", url: "/about" },
-    { label: "Designs", url: "/designs" },
+    { label: "Our Designs", url: "/designs" },
     { label: "Academy", url: "/academy" },
-    { label: "Contact Us", url: "/contact" },
   ];
 
   const navList = (
-    <div className="flex flex-col lg:flex-row gap-6 lg:gap-9 text-[15px]">
+    <div className="flex flex-col lg:flex-row gap-7 lg:gap-16 text-base">
       {links.map((item) => (
         <Link
           href={item.url}
           key={item.label}
-          className="block px-4 py-2.5 text-gray-700 hover:text-purple-700"
+          className={`relative group font-medium hover:text-primary hoverEffect ${
+            pathname === item.url ? "text-primary" : "text-gray-700"
+          }`}
         >
           {item.label}
+          <span
+            className={`hidden lg:block absolute -bottom-0.5 left-1/2 w-0 h-0.5 bg-[#137804] hoverEffect group-hover:w-1/2 group-hover:left-0 ${
+              pathname === item.url && "w-1/2"
+            }`}
+          />
+          <span
+            className={`hidden lg:block absolute -bottom-0.5 right-1/2 w-0 h-0.5 bg-[#137804] hoverEffect group-hover:w-1/2 group-hover:right-0 ${
+              pathname === item.url && "w-1/2"
+            }`}
+          />
         </Link>
       ))}
+      <Link
+        href="mailto:"
+        target="_blank"
+        className="relative group font-medium text-primary"
+      >
+        Contact Us
+      </Link>
     </div>
   );
 
   return (
     <div
-      className={`sticky top-0 z-50 ${
-        scrolled ? "bg-white border-b border-b-[#ddd]" : ""
+      className={`sticky top-0 z-50 transition-colors duration-500 ${
+        scrolled ? "bg-white border-b border-b-[#ddd]" : "bg-background"
       }`}
     >
       <div className="flex items-center justify-between px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
-        <a href="/">
-          <img
-            src="/m30-logo.svg"
+        <Link href="/">
+          <Image
+            src="/brand/nubeeka.png"
             alt="Logo"
-            height="436"
-            width="566"
-            className="w-16"
+            height={209}
+            width={285}
+            className="w-20 lg:w-28"
           />
-        </a>
-        <div className="mr-4 hidden xl:block">{navList}</div>
+        </Link>
+        <div className="mr-4 hidden lg:block">{navList}</div>
 
         <button
-          className="ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent xl:hidden"
+          className="ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           onClick={toggleMenu}
         >
           {isOpen ? (
@@ -93,9 +115,9 @@ export function NavbarComponent() {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h16m-7 6h7"
               ></path>
             </svg>
