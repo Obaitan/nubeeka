@@ -73,7 +73,7 @@ export default function Footer() {
                     >
                       {link.icon === "facebook" && (
                         <svg
-                          className="w-6 h-6"
+                          className="w-5 h-5"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -83,7 +83,7 @@ export default function Footer() {
 
                       {link.icon === "instagram" && (
                         <svg
-                          className="w-6 h-6"
+                          className="w-5 h-5"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -92,7 +92,7 @@ export default function Footer() {
                       )}
                       {link.icon === "linkedin" && (
                         <svg
-                          className="w-6 h-6"
+                          className="w-5 h-5"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >

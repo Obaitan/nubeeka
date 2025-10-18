@@ -36,7 +36,7 @@ export default function Home() {
                   {Array.from({ length: 9 }).map((_, i) => (
                     <div
                       key={i}
-                      className="w-2 h-2 bg-[#dcdcdd] rounded-full opacity-70"
+                      className="w-2 h-2 bg-primary/40 rounded-full"
                     />
                   ))}
                 </div>
@@ -44,7 +44,7 @@ export default function Home() {
                   {Array.from({ length: 9 }).map((_, i) => (
                     <div
                       key={i}
-                      className="w-2 h-2 bg-gray-300 rounded-full opacity-70"
+                      className="w-2 h-2 bg-secondary/40 rounded-full"
                     />
                   ))}
                 </div>
@@ -76,7 +76,7 @@ export default function Home() {
                   NUBEEKA CONCEPTS
                 </span>{" "}
                 is a fashion business organization that focuses primarily on the
-                advancement of the Nigerian and ultimately the African textie
+                advancement of the Nigerian and ultimately the African textile
                 and apparel industry through initiatives like Fashion Designing,
                 Trainings et cetera.
               </p>
@@ -110,7 +110,7 @@ export default function Home() {
             apparel and textile sector, making us unique.
           </p>
           <div className="grid grid-col-2 md:grid-cols-4 gap-4 xl:gap-6 items-center mt-10">
-            {designs.map((design, index) => (
+            {designs.slice(0, 4).map((design, index) => (
               <div
                 key={index}
                 className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] p-6"
@@ -234,7 +234,7 @@ export default function Home() {
                   className="w-14 h-14 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
                   aria-label="Email icon"
                 >
-                  <Mail className="w-8 h-8" />
+                  <Mail className="w-6 h-6" />
                 </Link>
                 {socialLinks.map((link) => (
                   <Link
@@ -246,7 +246,7 @@ export default function Home() {
                   >
                     {link.icon === "facebook" && (
                       <svg
-                        className="w-7 h-7"
+                        className="w-5 h-5"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -256,7 +256,7 @@ export default function Home() {
 
                     {link.icon === "instagram" && (
                       <svg
-                        className="w-7 h-7"
+                        className="w-5 h-5"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -265,7 +265,7 @@ export default function Home() {
                     )}
                     {link.icon === "linkedin" && (
                       <svg
-                        className="w-7 h-7"
+                        className="w-5 h-5"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >

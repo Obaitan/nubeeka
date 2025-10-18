@@ -21,7 +21,6 @@ export const socialLinks = [
 export const designs = [
   { url: "/designs/mabel.png", label: "Kaftan" },
   { url: "/designs/asa.png", label: "Kaftan" },
-  { url: "/designs/debbie.png", label: "Kaftan" },
   { url: "/designs/tabe.png", label: "Kaftan" },
   { url: "/designs/teni.png", label: "Kaftan" },
   { url: "/designs/mabel.png", label: "Kaftan" },
