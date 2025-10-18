@@ -1,18 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { designs, socialLinks } from "@/lib/resources";
+import { Mail } from "lucide-react";
 
 export default function Home() {
-  const designs = [
-    { url: "/designs/mabel.png", label: "Kaftan" },
-    { url: "/designs/asa.png", label: "Kaftan" },
-    { url: "/designs/debbie.png", label: "Kaftan" },
-    { url: "/designs/tabe.png", label: "Kaftan" },
-    { url: "/designs/teni.png", label: "Kaftan" },
-    { url: "/designs/mabel.png", label: "Kaftan" },
-    { url: "/designs/asa.png", label: "Kaftan" },
-    { url: "/designs/debbie.png", label: "Kaftan" },
-  ];
-
   return (
     <>
       <section className="py-16">
@@ -227,43 +218,119 @@ export default function Home() {
                 Get In Touch
               </h3>
               <p className="text-gray-800 text-lg md:text-xl leading-relaxed mb-5">
-                Explore our curated collection of stylish clothing and
-                accessories tailored to suit unique tastes and needs.
+                Looking to discuss a bespoke design, collaborate on a project,
+                or learn more about the Fashion Academy?
               </p>
-              <Link
-                href="/designs"
-                className="block w-fit bg-primary rounded font-semibold px-7 text-sm py-3 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase"
-              >
-                Explore Our Designs
-              </Link>
+              <div className="flex items-center gap-4 my-4">
+                <p className="text-gray-800 text-lg md:text-xl font-medium leading-relaxed">
+                  Call us on:
+                </p>
+                <span className="bg-gray-200/80 px-3 py-1 text-lg font-semibold text-primary">
+                  +234 801 000 1000, +234 802 000 2000
+                </span>
+              </div>
+              <p className="text-gray-800 text-lg md:text-xl font-medium leading-relaxed mb-2">
+                Or drop us a line
+              </p>
+              <div className="flex gap-4">
+                <Link
+                  href="mailto:myMail"
+                  target="_blank"
+                  className="w-14 h-14 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
+                  aria-label="Email icon"
+                >
+                  <Mail className="w-8 h-8" />
+                </Link>
+                {socialLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    className="w-14 h-14 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
+                    aria-label={link.name}
+                  >
+                    {link.icon === "facebook" && (
+                      <svg
+                        className="w-7 h-7"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                      </svg>
+                    )}
+
+                    {link.icon === "instagram" && (
+                      <svg
+                        className="w-7 h-7"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                      </svg>
+                    )}
+                    {link.icon === "linkedin" && (
+                      <svg
+                        className="w-7 h-7"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                      </svg>
+                    )}
+                  </Link>
+                ))}
+              </div>
             </div>
 
-            {/* RIGHT SECTION */}
-            <div>
-              <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] rounded-tl-[150px] rounded-bl-[90px] rounded-tr-[40px] rounded-br-[150px] flex justify-center items-center relative w-5/6 h-[560px] ml-auto">
-                <Image
-                  src="/model.png"
-                  alt="Designs"
-                  width={400}
-                  height={520}
-                  className="object-cover"
-                />
-                {/* Decorative dots */}
-                <div className="absolute left-9 bottom-9 grid grid-cols-3 gap-2.5">
-                  {Array.from({ length: 9 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-2 h-2 bg-[#dcdcdd] rounded-full opacity-70"
+            <div className="flex justify-end">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex flex-col items-center gap-2">
+                  <div className="h-[180px] w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
+                    <Image
+                      src="/academy/academy-3.jpg"
+                      alt="Academy image"
+                      fill
+                      className="object-cover"
                     />
-                  ))}
+                  </div>
+                  <p className="text-primary font-medium">Bespoke Designs</p>
                 </div>
-                <div className="absolute right-6 top-6 grid grid-cols-3 gap-2.5">
-                  {Array.from({ length: 9 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-2 h-2 bg-gray-300 rounded-full opacity-70"
+                <div className="flex flex-col items-center gap-2">
+                  <div className="h-[180px] w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
+                    <Image
+                      src="/brand/chic-3.png"
+                      alt="Academy image"
+                      fill
+                      className="object-contain"
                     />
-                  ))}
+                  </div>
+                  <p className="text-primary font-medium">
+                    Ready-To-Wear Pieces
+                  </p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="h-[180px] w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
+                    <Image
+                      src="/academy/academy-4.jpg"
+                      alt="Academy image"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <p className="text-primary font-medium">Fashion Academy</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="h-[180px] w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
+                    <Image
+                      src="/academy/academy-2.png"
+                      alt="Academy image"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <p className="text-primary font-medium">
+                    Clothing Accessories
+                  </p>
                 </div>
               </div>
             </div>

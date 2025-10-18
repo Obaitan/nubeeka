@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { NavLinks } from "@/types";
+import { links } from "@/lib/resources";
 
 import { usePathname } from "next/navigation";
 
@@ -29,12 +29,6 @@ export function NavbarComponent() {
       document.removeEventListener("scroll", handleScroll);
     };
   }, [scrolled]);
-
-  const links: NavLinks[] = [
-    { label: "About Us", url: "/about" },
-    { label: "Our Designs", url: "/designs" },
-    { label: "Fashion Academy", url: "/academy" },
-  ];
 
   const navList = (
     <div className="flex flex-col lg:flex-row gap-7 lg:gap-16 text-base">
