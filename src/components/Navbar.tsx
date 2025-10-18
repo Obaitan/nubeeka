@@ -33,7 +33,7 @@ export function NavbarComponent() {
   const links: NavLinks[] = [
     { label: "About Us", url: "/about" },
     { label: "Our Designs", url: "/designs" },
-    { label: "Academy", url: "/academy" },
+    { label: "Fashion Academy", url: "/academy" },
   ];
 
   const navList = (

@@ -2,9 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const designs = [
+    { url: "/designs/mabel.png", label: "Kaftan" },
+    { url: "/designs/asa.png", label: "Kaftan" },
+    { url: "/designs/debbie.png", label: "Kaftan" },
+    { url: "/designs/tabe.png", label: "Kaftan" },
+    { url: "/designs/teni.png", label: "Kaftan" },
+    { url: "/designs/mabel.png", label: "Kaftan" },
+    { url: "/designs/asa.png", label: "Kaftan" },
+    { url: "/designs/debbie.png", label: "Kaftan" },
+  ];
+
   return (
     <>
-      <section className="px-6 md:px-20 py-16 md:py-20">
+      <section className="py-16">
         <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
           <main className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
             {/* LEFT SECTION */}
@@ -26,7 +37,7 @@ export default function Home() {
 
             {/* RIGHT SECTION */}
             <div>
-              <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] rounded-tl-[150px] rounded-bl-[90px] rounded-tr-[40px] rounded-br-[150px] flex justify-between items-center relative w-5/6 ml-auto">
+              <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] rounded-tl-[150px] rounded-bl-[90px] rounded-tr-[40px] rounded-br-[150px] flex justify-center items-center relative w-5/6 h-[560px] ml-auto">
                 <Image
                   src="/model.png"
                   alt="Designs"
@@ -56,7 +67,7 @@ export default function Home() {
           </main>
         </div>
       </section>
-      <section className="bg-white px-6 md:px-20 py-16">
+      <section className="bg-white py-16">
         <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
           <div className="grid grid-col-1 md:grid-cols-2 gap-10 xl:gap-2 items-center">
             <div>
@@ -99,7 +110,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-6 md:px-20 py-16">
+      <section className="py-16">
         <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
           <div className="flex items-end justify-center gap-1.5">
             <span className="w-12 h-[3px] bg-primary relative bottom-2"></span>
@@ -112,37 +123,22 @@ export default function Home() {
             consistently lead to innovative clothing designs in the African
             apparel and textile sector, making us unique.
           </p>
-          <div className="grid grid-col-1 md:grid-cols-3 gap-6 xl:gap-8 items-center mt-10">
-            <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] p-6">
-              <div className="h-[390px] flex justify-between items-center relative overflow-hidden">
-                <Image
-                  src="/designs/mabel.png"
-                  alt="Designs"
-                  fill
-                  className="object-contain"
-                />
+          <div className="grid grid-col-2 md:grid-cols-4 gap-4 xl:gap-6 items-center mt-10">
+            {designs.map((design, index) => (
+              <div
+                key={index}
+                className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] p-6"
+              >
+                <div className="h-[360px] flex justify-between items-center relative overflow-hidden">
+                  <Image
+                    src={design.url}
+                    alt={design.label}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] p-6">
-              <div className="h-[390px] flex justify-between items-center relative overflow-hidden">
-                <Image
-                  src="/designs/asa.png"
-                  alt="Designs"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-            <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] p-6">
-              <div className="h-[390px] flex justify-between items-center relative overflow-hidden">
-                <Image
-                  src="/designs/teni.png"
-                  alt="Designs"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
+            ))}
           </div>
           <div className="flex justify-center mt-9 w-full">
             <Link
@@ -154,7 +150,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-accent px-6 md:px-20 py-16 md:py-20">
+      <section className="bg-accent py-16 md:py-20">
         <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
           <div className="grid grid-col-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="grid grid-cols-2 gap-4">
@@ -221,6 +217,57 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="px-6 md:px-20 py-16 md:py-20">
+        <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
+          <main className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold text-secondary leading-tight mb-4">
+                Get In Touch
+              </h3>
+              <p className="text-gray-800 text-lg md:text-xl leading-relaxed mb-5">
+                Explore our curated collection of stylish clothing and
+                accessories tailored to suit unique tastes and needs.
+              </p>
+              <Link
+                href="/designs"
+                className="block w-fit bg-primary rounded font-semibold px-7 text-sm py-3 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase"
+              >
+                Explore Our Designs
+              </Link>
+            </div>
+
+            {/* RIGHT SECTION */}
+            <div>
+              <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] rounded-tl-[150px] rounded-bl-[90px] rounded-tr-[40px] rounded-br-[150px] flex justify-center items-center relative w-5/6 h-[560px] ml-auto">
+                <Image
+                  src="/model.png"
+                  alt="Designs"
+                  width={400}
+                  height={520}
+                  className="object-cover"
+                />
+                {/* Decorative dots */}
+                <div className="absolute left-9 bottom-9 grid grid-cols-3 gap-2.5">
+                  {Array.from({ length: 9 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="w-2 h-2 bg-[#dcdcdd] rounded-full opacity-70"
+                    />
+                  ))}
+                </div>
+                <div className="absolute right-6 top-6 grid grid-cols-3 gap-2.5">
+                  {Array.from({ length: 9 }).map((_, i) => (
+                    <div
+                      key={i}
+                      className="w-2 h-2 bg-gray-300 rounded-full opacity-70"
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </main>
         </div>
       </section>
     </>
