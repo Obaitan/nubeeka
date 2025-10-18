@@ -30,13 +30,6 @@ export default function Home() {
             {/* RIGHT SECTION */}
             <div>
               <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] rounded-tl-[150px] rounded-bl-[90px] rounded-tr-[40px] rounded-br-[150px] flex justify-center items-center relative w-5/6 h-[560px] ml-auto">
-                {/* <Image
-                  src="/model.png"
-                  alt="Designs"
-                  width={400}
-                  height={520}
-                  className="object-cover"
-                /> */}
                 <ImageCarousel />
                 {/* Decorative dots */}
                 <div className="absolute left-9 bottom-9 grid grid-cols-3 gap-2.5">
