@@ -34,7 +34,7 @@ const AboutPage = () => {
                 in the African apparel and textile sector, makes us unique.
               </p>
               <div className="grid grid-cols-1 gap-4">
-                <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#ececed)] p-4">
+                <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#ececed)] px-5 py-4">
                   <div className="flex items-end gap-1">
                     <span className="w-8 h-[2px] bg-primary relative bottom-3"></span>
                     <p className="text-secondary text-sm font-bold uppercase mb-1">
@@ -47,7 +47,7 @@ const AboutPage = () => {
                     and services in fashion to both local and global customers.
                   </p>
                 </div>
-                <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#ececed)] p-4">
+                <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#ececed)] px-5 py-4">
                   <div className="flex items-end gap-1">
                     <span className="w-8 h-[2px] bg-primary relative bottom-3"></span>
                     <p className="text-secondary text-sm font-bold uppercase mb-1">
@@ -82,7 +82,7 @@ const AboutPage = () => {
                 href="/designs"
                 className="block w-fit bg-primary rounded font-semibold px-8 text-sm py-2 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase"
               >
-                more
+                learn more
               </Link>
             </div>
             <div className="h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-2xl shadow-xl border-2 border-white">
@@ -116,7 +116,7 @@ const AboutPage = () => {
                 href="/academy"
                 className="block w-fit bg-primary rounded font-semibold px-8 text-sm py-2 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase"
               >
-                more
+                learn more
               </Link>
             </div>
           </div>

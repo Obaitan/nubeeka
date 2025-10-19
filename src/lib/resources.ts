@@ -19,13 +19,14 @@ export const socialLinks = [
 ];
 
 export const designs = [
-  { url: "/designs/mabel.png", label: "Kaftan" },
-  { url: "/designs/asa.png", label: "Kaftan" },
-  { url: "/designs/tabe.png", label: "Kaftan" },
-  { url: "/designs/teni.png", label: "Kaftan" },
-  { url: "/designs/mabel.png", label: "Kaftan" },
-  { url: "/designs/asa.png", label: "Kaftan" },
-  { url: "/designs/debbie.png", label: "Kaftan" },
+  { url: "/designs/mabel.png", label: "Kaftan 1" },
+  { url: "/designs/asa.png", label: "Kaftan 2" },
+  { url: "/designs/tabe.png", label: "Kaftan 3" },
+  { url: "/designs/teni.png", label: "Kaftan 4" },
+  { url: "/designs/mabel.png", label: "Kaftan 5" },
+  { url: "/designs/asa.png", label: "Kaftan 6" },
+  { url: "/designs/debbie.png", label: "Kaftan 7" },
+  { url: "/designs/teni.png", label: "Kaftan 8" },
 ];
 
 export const links: NavLinks[] = [

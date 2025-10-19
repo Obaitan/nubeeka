@@ -42,12 +42,12 @@ export function NavbarComponent() {
         >
           {item.label}
           <span
-            className={`hidden lg:block absolute -bottom-0.5 left-1/2 w-0 h-0.5 bg-[#137804] hoverEffect group-hover:w-1/2 group-hover:left-0 ${
+            className={`hidden lg:block absolute -bottom-1 left-1/2 w-0 h-0.5 bg-[#137804] hoverEffect group-hover:w-1/2 group-hover:left-0 ${
               pathname === item.url && "w-1/2"
             }`}
           />
           <span
-            className={`hidden lg:block absolute -bottom-0.5 right-1/2 w-0 h-0.5 bg-[#137804] hoverEffect group-hover:w-1/2 group-hover:right-0 ${
+            className={`hidden lg:block absolute -bottom-1 right-1/2 w-0 h-0.5 bg-[#137804] hoverEffect group-hover:w-1/2 group-hover:right-0 ${
               pathname === item.url && "w-1/2"
             }`}
           />
