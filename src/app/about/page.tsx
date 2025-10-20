@@ -56,8 +56,8 @@ const AboutPage = () => {
                   </div>
 
                   <p className="text-base">
-                    To be the world's most influential fashion house, known for
-                    products that elevate personal style and empower lives
+                    To be the world&apos;s most influential fashion house, known
+                    for products that elevate personal style and empower lives
                     globally.
                   </p>
                 </div>
