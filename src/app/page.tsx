@@ -11,25 +11,25 @@ export default function Home() {
         <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
           <main className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
             {/* LEFT SECTION */}
-            <div className="xl:pr-8">
-              <h1 className="text-3xl md:text-[56px] font-bold text-secondary leading-tight mb-4">
+            <div className="xl:pr-8 order-last xl:order-first text-center xl:text-left w-full md:w-5/6 lg:w-4/6 xl:w-full mx-auto">
+              <h1 className="text-3xl md:text-5xl xl:text-[56px] font-bold text-secondary leading-tight mb-4">
                 Discover Your Own Fashion Sense
               </h1>
-              <p className="text-gray-800 text-lg md:text-xl leading-relaxed mb-5">
+              <p className="text-gray-800 text-lg md:text-2xl xl:text-xl leading-relaxed mb-5">
                 Explore our curated collection of stylish clothing and
                 accessories tailored to suit unique tastes and needs.
               </p>
               <Link
                 href="/designs"
-                className="block w-fit bg-primary rounded font-semibold px-7 text-sm py-3 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase"
+                className="block w-fit bg-primary rounded font-semibold px-7 text-sm py-3 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase mx-auto xl:mx-0"
               >
                 Explore Our Designs
               </Link>
             </div>
 
             {/* RIGHT SECTION */}
-            <div>
-              <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] rounded-tl-[150px] rounded-bl-[90px] rounded-tr-[40px] rounded-br-[150px] flex justify-center items-center relative w-5/6 h-[560px] ml-auto">
+            <div className="order-first xl:order-last">
+              <div className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] rounded-tl-[90px] xl:rounded-tl-[150px] rounded-bl-[90px] rounded-tr-[40px] rounded-br-[90px] xl:rounded-br-[150px] flex justify-center items-center relative w-full md:w-3/5 xl:w-5/6 h-92 md:h-[480px] lg:h-[680px] xl:h-[560px] md:mx-auto xl:ml-auto">
                 <ImageCarousel />
                 {/* Decorative dots */}
                 <div className="absolute left-9 bottom-9 grid grid-cols-3 gap-2.5">
@@ -63,11 +63,11 @@ export default function Home() {
                 width={611}
                 height={650}
                 priority
-                className="w-4/5"
+                className="w-full xl:w-4/5"
               />
             </div>
-            <div className="text-lg space-y-5">
-              <div className="flex items-end gap-1.5">
+            <div className="text-lg space-y-5 text-center xl:text-left">
+              <div className="flex justify-center xl:justify-start items-end gap-1.5">
                 <span className="w-12 h-[3px] bg-primary relative bottom-2"></span>
                 <h4 className="text-secondary text-xl font-bold">About Us</h4>
               </div>
@@ -80,7 +80,7 @@ export default function Home() {
                 and apparel industry through initiatives like Fashion Designing,
                 Trainings et cetera.
               </p>
-              <p>
+              <p className="md:hidden lg:block">
                 We blend together cutting edge creativity with initiatives that
                 consistently seeks to achieve success in the Fashion industry
                 commercial success our strategic and innovative clothing designs
@@ -88,7 +88,7 @@ export default function Home() {
               </p>
               <Link
                 href="/about"
-                className="block w-fit bg-primary rounded font-semibold px-7 text-sm py-3 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase"
+                className="block w-fit bg-primary rounded font-semibold px-7 text-sm py-3 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase mx-auto xl:mx-0"
               >
                 More About Us
               </Link>
@@ -115,7 +115,7 @@ export default function Home() {
                 key={index}
                 className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] p-6"
               >
-                <div className="h-[360px] flex justify-between items-center relative overflow-hidden">
+                <div className="h-80 md:h-[180px] lg:h-[280px] xl:h-[360px] flex justify-between items-center relative overflow-hidden">
                   <Image
                     src={design.url}
                     alt={design.label}
@@ -140,7 +140,7 @@ export default function Home() {
         <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
           <div className="grid grid-col-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="grid grid-cols-2 gap-4">
-              <div className="h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-3xl shadow-xl border-[4px] border-white">
+              <div className="h-36 lg:h-48 xl:h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-3xl shadow-xl border-[4px] border-white">
                 <Image
                   src="/academy/academy-2.png"
                   alt="Academy image"
@@ -148,7 +148,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-3xl shadow-xl border-[4px] border-white">
+              <div className="h-36 lg:h-48 xl:h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-3xl shadow-xl border-[4px] border-white">
                 <Image
                   src="/academy/academy-4.jpg"
                   alt="Academy image"
@@ -156,7 +156,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-3xl shadow-xl border-[4px] border-white">
+              <div className="h-36 lg:h-48 xl:h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-3xl shadow-xl border-[4px] border-white">
                 <Image
                   src="/academy/academy-3.jpg"
                   alt="Academy image"
@@ -164,7 +164,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-3xl shadow-xl border-[4px] border-white">
+              <div className="h-36 lg:h-48 xl:h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-3xl shadow-xl border-[4px] border-white">
                 <Image
                   src="/academy/academy.jpg"
                   alt="Academy image"
@@ -173,8 +173,8 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="text-lg space-y-5">
-              <div className="flex items-end gap-1.5">
+            <div className="text-lg space-y-5 text-center xl:text-left">
+              <div className="flex justify-center items-end gap-1.5">
                 <span className="w-12 h-[3px] bg-primary relative bottom-2"></span>
                 <h4 className="text-secondary text-xl font-bold">
                   Our Fashion Academy
@@ -189,7 +189,7 @@ export default function Home() {
                 and apparel industry through initiatives like Fashion Designing,
                 Trainings et cetera.
               </p>
-              <p>
+              <p className="md:hidden lg:block">
                 We blend together cutting edge creativity with initiatives that
                 consistently seeks to achieve success in the Fashion industry
                 commercial success our strategic and innovative clothing designs
@@ -197,7 +197,7 @@ export default function Home() {
               </p>
               <Link
                 href="/academy"
-                className="block w-fit bg-primary rounded font-semibold px-7 text-sm py-3 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase"
+                className="block w-fit bg-primary rounded font-semibold px-7 text-sm py-3 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase mx-auto xl:mx-0"
               >
                 Learn More
               </Link>
@@ -205,8 +205,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-6 md:px-20 py-16 md:py-20">
-        <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
+      <section className="lg:px-20 py-16 md:py-20">
+        <div className="px-6 lg:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
           <main className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl md:text-4xl font-bold text-secondary leading-tight mb-4">
@@ -216,13 +216,15 @@ export default function Home() {
                 Looking to discuss a bespoke design, collaborate on a project,
                 or learn more about the Fashion Academy?
               </p>
-              <div className="flex items-center gap-4 my-4">
+              <div className="space-y-2 my-5">
                 <p className="text-gray-800 text-lg md:text-xl font-medium leading-relaxed">
                   Call us on:
                 </p>
-                <span className="bg-gray-200/80 px-3 py-1 text-lg font-semibold text-primary">
-                  +234 801 000 1000, +234 802 000 2000
-                </span>
+                <div className="bg-gray-200/80 px-3 py-2 text-lg font-semibold text-primary flex flex-wrap gap-x-2.5 gap-y-1">
+                  <span>+234 802 303 8483,</span>
+                  <span>+234 810 696 4279,</span>
+                  <span>+234 802 640 4334</span>
+                </div>
               </div>
               <p className="text-gray-800 text-lg md:text-xl font-medium leading-relaxed mb-2">
                 Or drop us a line
@@ -277,10 +279,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex justify-end">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex flex-col items-center gap-2">
-                  <div className="h-[180px] w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
+            <div className="flex xl:justify-end">
+              <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-2 gap-3">
+                <div className="text-center space-y-2">
+                  <div className="h-36 xl:h-[180px] w-full xl:w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
                     <Image
                       src="/academy/academy-3.jpg"
                       alt="Academy image"
@@ -288,10 +290,12 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <p className="text-primary font-medium">Bespoke Designs</p>
+                  <p className="text-primary font-medium text-sm md:text-base">
+                    Bespoke Designs
+                  </p>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <div className="h-[180px] w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
+                <div className="text-center space-y-2">
+                  <div className="h-36 xl:h-[180px] w-full xl:w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
                     <Image
                       src="/brand/chic-3.png"
                       alt="Academy image"
@@ -299,12 +303,12 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                  <p className="text-primary font-medium">
+                  <p className="text-primary font-medium text-sm md:text-base">
                     Ready-To-Wear Pieces
                   </p>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <div className="h-[180px] w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
+                <div className="text-center space-y-2">
+                  <div className="h-36 xl:h-[180px] w-full xl:w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
                     <Image
                       src="/academy/academy-4.jpg"
                       alt="Academy image"
@@ -312,10 +316,12 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <p className="text-primary font-medium">Fashion Academy</p>
+                  <p className="text-primary font-medium text-sm md:text-base">
+                    Fashion Academy
+                  </p>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <div className="h-[180px] w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
+                <div className="text-center space-y-2">
+                  <div className="h-36 xl:h-[180px] w-full xl:w-[200px] flex justify-between items-center relative overflow-hidden rounded-3xl shadow-sm border-[4px] border-white">
                     <Image
                       src="/academy/academy-2.png"
                       alt="Academy image"
@@ -323,7 +329,7 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <p className="text-primary font-medium">
+                  <p className="text-primary font-medium text-sm md:text-base">
                     Clothing Accessories
                   </p>
                 </div>

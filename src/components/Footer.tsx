@@ -45,12 +45,16 @@ export default function Footer() {
                 <h3 className="font-bold mb-4 text-white">
                   Other Contact Channels
                 </h3>
-                <div className="flex flex-col gap-2 text-gray-400">
-                  <p>+234 801 000 1000, +234 802 000 2000</p>
+                <div className="flex flex-col gap-2 text-gray-300">
+                  <div className="flex flex-wrap gap-2">
+                    <span>+234 802 303 8483,</span>
+                    <span>+234 810 696 4279,</span>
+                    <span>+234 802 640 4334</span>
+                  </div>
                   <Link
                     href="mailto:"
                     target="_blank"
-                    className="text-gray-400 hover:text-purple-600 transition-colors"
+                    className="text-gray-400 hover:text-secondary transition-colors"
                   >
                     hello@nubeekaconcepts.com
                   </Link>

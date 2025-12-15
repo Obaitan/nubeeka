@@ -7,7 +7,7 @@ const AboutPage = () => {
       <section className="py-16">
         <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-10 xl:gap-12 items-center">
-            <div className="w-5/12">
+            <div className="w-full md:w-2/3 xl:w-5/12">
               <Image
                 src="/brand/chic-3.png"
                 alt="Nubeeka brand image"
@@ -17,7 +17,7 @@ const AboutPage = () => {
                 className="w-full"
               />
             </div>
-            <div className="w-7/12 space-y-5 text-[17px]">
+            <div className="w-full md:w-full lg:w-7/12 space-y-5 text-[17px]">
               <p>
                 <span className="font-semibold text-primary tracking-wide">
                   NUBEEKA CONCEPTS
@@ -68,8 +68,8 @@ const AboutPage = () => {
       </section>
       <section className="bg-white py-16">
         <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 items-center w-5/6 mx-auto">
-            <div className="col-span-1 lg:col-span-2 text-[17px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-16 items-center w-full xl:w-5/6 mx-auto">
+            <div className="col-span-1 lg:col-span-2 text-[17px] order-last xl:order-first">
               <p className="mb-1 text-primary font-bold">Our Designs</p>
               <p className="mb-4">
                 We blend together cutting edge creativity with initiatives that
@@ -85,7 +85,7 @@ const AboutPage = () => {
                 learn more
               </Link>
             </div>
-            <div className="h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-2xl shadow-xl border-2 border-white">
+            <div className="h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-2xl shadow-xl border-2 border-white order-first xl:order-last">
               <Image
                 src="/academy/academy-3.jpg"
                 alt="Academy image"
@@ -94,7 +94,7 @@ const AboutPage = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 items-center mt-24 w-5/6 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-20 items-center mt-24 w-full xl:w-5/6 mx-auto">
             <div className="h-[225px] w-full flex justify-between items-center relative overflow-hidden rounded-2xl shadow-xl border-2 border-white">
               <Image
                 src="/academy/academy-4.jpg"

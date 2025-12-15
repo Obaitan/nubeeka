@@ -30,12 +30,13 @@ export function NavbarComponent() {
     };
   }, [scrolled]);
 
-  const navList = (
+  const navList = (onLinkClick?: () => void) => (
     <div className="flex flex-col lg:flex-row gap-7 lg:gap-16 text-base">
       {links.map((item) => (
         <Link
           href={item.url}
           key={item.label}
+          onClick={onLinkClick}
           className={`relative group font-medium hover:text-primary hoverEffect ${
             pathname === item.url ? "text-primary" : "text-gray-700"
           }`}
@@ -56,6 +57,7 @@ export function NavbarComponent() {
       <Link
         href="mailto:"
         target="_blank"
+        onClick={onLinkClick}
         className="relative group font-medium text-primary"
       >
         Contact Us
@@ -79,7 +81,7 @@ export function NavbarComponent() {
             className="w-20 lg:w-28"
           />
         </Link>
-        <div className="mr-4 hidden lg:block">{navList}</div>
+        <div className="mr-4 hidden lg:block">{navList()}</div>
 
         <button
           className="ml-auto text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -89,7 +91,7 @@ export function NavbarComponent() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              className="h-7 w-7 text-primary-400"
+              className="size-7 text-primary-400"
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
@@ -103,7 +105,7 @@ export function NavbarComponent() {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="size-7"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -120,11 +122,11 @@ export function NavbarComponent() {
       </div>
 
       <div
-        className={`bg-white fixed z-50 top-[73px] right-0 w-full h-full px-6 md:px-12 overflow-hidden transform transition-transform duration-700 ease-in-out border-y border-y-[#eee] ${
+        className={`bg-white fixed z-50 top-20 right-0 w-full h-full px-6 md:px-12 pt-4 overflow-hidden transform transition-transform duration-700 ease-in-out border-y border-y-[#eee] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {navList}
+        {navList(() => setIsOpen(false))}
       </div>
     </div>
   );

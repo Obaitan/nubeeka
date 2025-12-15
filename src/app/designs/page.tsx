@@ -33,7 +33,7 @@ const DesignsPage = () => {
 
   return (
     <>
-      <section className="px-6 md:px-20 py-16 md:py-20">
+      <section className="xl:px-20 py-16 lg:py-20">
         <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
           <div className="flex items-end justify-center gap-1.5">
             <span className="w-12 h-[3px] bg-primary relative bottom-2"></span>
@@ -52,7 +52,7 @@ const DesignsPage = () => {
                 key={index}
                 className="bg-[linear-gradient(to_bottom_right,_#f2f2f2,_#dcdcdd)] p-6"
               >
-                <div className="h-[360px] flex justify-between items-center relative overflow-hidden">
+                <div className="h-80 md:h-[180px] lg:h-[280px] xl:h-[360px] flex justify-between items-center relative overflow-hidden">
                   <Image
                     src={design.url}
                     alt={design.label}
@@ -61,7 +61,7 @@ const DesignsPage = () => {
                   />
                   <Button
                     variant="default"
-                    className="bg-white text-secondary text-sm font-semibold absolute bottom-0 left-0 right-0 w-fit mx-auto px-9 hover:bg-gray-100 hover:opacity-100"
+                    className="bg-white text-secondary text-sm font-semibold absolute bottom-0 left-0 right-0 w-fit mx-auto px-3 lg:px-9 hover:bg-gray-100 hover:opacity-100"
                     onClick={() => handleOpenQuoteModal(design)}
                   >
                     Get A Quote
@@ -81,10 +81,10 @@ const DesignsPage = () => {
           />
         )}
       </section>
-      <section className="bg-white py-20">
+      <section className="bg-white py-16 lg:py-20">
         <div className="px-6 py-3 md:py-3.5 md:px-12 xl:px-0 w-full xl:w-[1160px] 2xl:[1240px] mx-auto">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
-            <div className="pr-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10 md:gap-12 items-center w-full md:w-4/5 lg:w-full mx-auto">
+            <div className="xl:pr-10">
               <Image
                 src="/brand/tailor.jpg"
                 alt="Academy image"
@@ -93,8 +93,8 @@ const DesignsPage = () => {
                 className="w-full rounded-4xl shadow-lg border-[4px] border-white"
               />
             </div>
-            <div>
-              <h3 className="text-3xl md:text-5xl font-bold text-secondary leading-tight mb-4">
+            <div className="text-center lg:text-left">
+              <h3 className="text-3xl md:text-4xl xl:text-5xl font-bold text-secondary leading-tight mb-4">
                 For your bespoke designs and orders, contact us
               </h3>
               <p className="text-gray-800 text-lg md:text-xl leading-relaxed mb-5">
@@ -103,7 +103,7 @@ const DesignsPage = () => {
               </p>
               <Link
                 href="mailto:"
-                className="block w-fit bg-primary rounded font-semibold px-7 text-sm py-3 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase"
+                className="block w-fit bg-primary rounded font-semibold px-7 text-sm py-3 shadow-sm transition-all cursor-pointer text-white hover:opacity-90 uppercase mx-auto lg:mx-0"
               >
                 Get in touch
               </Link>
