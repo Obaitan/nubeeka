@@ -59,8 +59,7 @@ export default function Footer() {
                     hello@nubeekaconcepts.com
                   </Link>
                   <p>
-                    The place between House 3, Road 1 and House 4, Road 1,
-                    Lagos, Nigeria
+                   1, Lateef Aregbe street off Grandmate Bus Stop, Ago Palace Way, Okota, Lagos.
                   </p>
                 </div>
               </div>

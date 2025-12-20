@@ -89,7 +89,7 @@ const FashionAcademyPage = () => {
             <div className="hidden md:block lg:hidden"></div>
           </div>
         </div>
-        <hr className="mt-10 mb-14" />
+        <hr className="mt-12 mb-16" />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-12 items-center">
           <div className="xl:pr-10 w-full md:w-5/6 lg:w-full mx-auto">
             <Image
